@@ -1,0 +1,34 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="app" title="who knew">
+        {{ message }}
+        </div>
+        <div id="app2">
+            <span v-bind:title="message">
+                Hover me!
+            </span>
+        </div>
+        <div id="app3">
+            <span v-if="seen" transition="fade">Now you see me</span>
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+            <button v-on:click="showhide">CLick Me!</button>
+        </div>
+        <div id="app4">
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+        <div id="app5">
+            <ol>
+                <todo-item v-for="item in todos" v-bind:todo="item" />
+            </ol>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="src/main.js"></script>
+    </body>
+</html>
